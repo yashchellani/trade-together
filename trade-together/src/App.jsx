@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import fetchData from './fetchData.jsx'
+import FetchData from './FetchData'
 
 function App() {
   return (
