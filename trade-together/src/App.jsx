@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Contacts from './components/contacts';
 import Card from "./components/Card";
 import stonk from "./resources/assets/stonk.jpeg";
+import {Link} from 'react-router-dom';
 
 
 const stock = {
@@ -32,6 +33,10 @@ class App extends Component {
             description={stock.description}
           />
         </header>
+        <Link to="/HomePage"><button>
+              Go to Home Page 
+            </button>
+            </Link>
       </div>
 
       //<Contacts contacts={this.state.contacts} />
@@ -47,6 +52,10 @@ class App extends Component {
   //   })
   //   .catch(console.log)
   // }
+}
+
+const getStockPrices = () => {
+  console.log(fetch('http://127.0.0.1:9000/stock/all'))
 }
 
 export default App;
